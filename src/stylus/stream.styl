@@ -1,0 +1,176 @@
+$flipstream-transition-time = .3s
+
+ease-out-transition()
+  transition-property: background-color, -webkit-transform, box-shadow
+  transition-duration: $flipstream-transition-time, $flipstream-transition-time, $flipstream-transition-time
+  transition-timing-function: ease-out, ease-out, ease-out
+  transition-delay: $flipstream-transition-time, $flipstream-transition-time, $flipstream-transition-time
+
+ease-in-transition()
+  transition-property: background-color, -webkit-transform, box-shadow
+  transition-duration: $flipstream-transition-time, $flipstream-transition-time, $flipstream-transition-time
+  transition-timing-function: ease-in, ease-in, ease-in
+  transition-delay: 0, 0, 0
+
+html, body
+  height: 100%
+  overflow: hidden
+
+body
+  background: #f0f0f0 url( 'img/texture/lightsketch.png' )
+
+.flipstream
+  clearfix()
+  position: absolute
+  width: 75%
+  height: 60%
+  top: 20%
+  left: 12.5%
+  font-size: 90%
+  line-height: 145%
+  
+  > *
+    float: left
+    
+  article
+    -webkit-flow-into: article-flow
+  
+  @region #article-flow
+    p
+      margin-top: 0
+  
+  [class*='nav']
+    a
+      display: block
+      position: absolute
+      top: 45%
+      width: 5%
+      height: 10%
+      background: #999999
+      transition: all .2s ease-out
+      color: #cccccc
+      text-shadow: 0 -1px 0 rgba( 0, 0, 0, .5 )
+      box-sizing: border-box
+      padding: 2%
+      text-align: center
+      text-decoration: none
+      font-size: 2em
+      &:hover
+        background: #666666
+        text-decoration: none
+      &.hidden
+        opacity: 0
+      
+  .previous-nav
+    a
+      left: 0
+      &:hover
+        left: -7px
+        
+  .next-nav
+    a
+      right: 2px
+      &:hover
+        right: -5px
+  
+  .page-container
+    clearfix()
+    position: relative
+    margin-left: 5%
+    width: 90%
+    height: 100%
+    perspective: 1700
+    
+    .page
+      position: absolute
+      left: 50%
+      width: 50%
+      height: 100%
+      transform-origin: 0 50%
+      backface-visibility: visible
+      background: #cccccc url( 'img/texture/lightpaperfibers.png' )
+      border: 2px solid #aaaaaa
+      border-left-width: 0
+      box-sizing: border-box
+      border-radius: 0 7px 7px 0
+      overflow: hidden
+      
+      &:nth-child( odd )
+        ease-out-transition()
+        &.selected
+          box-shadow: inset 50px 0 60px #ffffff, 0px 2px 1px rgba( 0, 0, 0, .08 )
+        &.turned
+          ease-in-transition()
+          transform: rotate3d( 0, 1, 0, -90deg )
+        h2
+          text-align: right
+          
+      &:nth-child( even )
+        ease-in-transition()
+        transform: rotate3d( 0, 1, 0, -90deg )
+        &.turned
+          ease-out-transition()
+          transform: rotate3d( 0, 1, 0, -180deg )
+        > *
+          transform: scale( -1, 1 )
+      
+      &.cover
+        &, &.selected
+          background-color: #aaaaaa
+          border-color: #666666
+          border-left-style: solid !important
+          &:nth-child( odd )
+            box-shadow: inset 50px 0 60px rgba( 255, 255, 255, .2 ), 0px 2px 1px rgba( 0, 0, 0, .08 )
+          h2, footer
+            color: #ffffff
+            text-shadow: 0 -1px 0 rgba( 0, 0, 0, .5 )
+          .flow
+            -webkit-flow-from: none !important
+      
+      &.cover,
+      &:nth-child( even )
+        border-left: 1px dashed rgba( 0, 0, 0, .2 )
+      
+      &.selected
+        background-color: #f9f9f9
+        box-shadow: inset 40px 0 60px rgba( 0, 0, 0, .07 ), 0px 2px 1px rgba( 0, 0, 0, .08 )
+        h2
+          color: rgba( 0, 0, 0, .5 )
+        > *
+          opacity: 1
+      
+      .article
+        clearfix()
+        position: absolute
+        top: 13%
+        bottom: 7%
+        left: 7%
+        right: 7%
+        
+        .flow
+          -webkit-flow-from: article-flow
+          float: left
+          width: 47.5%
+          height: 100%
+          &:first-child
+            margin-right: 5%
+      
+      h2
+        margin: 7%
+        font-size: 2em
+        display: block
+        
+      footer
+        position: absolute
+        bottom: 0
+        left: 5%
+        right: 5%
+        text-align: center
+        font-size: .8em
+        
+      h2, footer
+        text-shadow: 0 1px 0 #ffffff
+
+      > *
+        opacity: .5
+        transition: $flipstream-transition-time all ease-out $flipstream-transition-time

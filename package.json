@@ -1,0 +1,11 @@
+{
+    "name": "flipstream",
+    "description": "",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "*",
+        "grunt-contrib": "*",
+        "stylus": "*",
+        "nib": "*"
+    }
+}

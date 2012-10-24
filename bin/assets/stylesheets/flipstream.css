@@ -1,0 +1,378 @@
+body {
+  font-family: "Lucida Grande", Calibri, Arial, sans-serif;
+  font-size: 0.7em;
+  line-height: 1.5em;
+  background: #e0e0e0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.primary {
+  color: #332121;
+}
+.secondary,
+a,
+body {
+  color: #504b45;
+}
+.tertiary {
+  color: #827e7a;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #fdfdfd;
+  padding: 0;
+  height: 0;
+  margin: 0.5em 0;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: #f0f0f0 url("img/texture/lightsketch.png");
+}
+.flipstream {
+  zoom: 1;
+  position: absolute;
+  width: 75%;
+  height: 60%;
+  top: 20%;
+  left: 12.5%;
+  font-size: 90%;
+  line-height: 145%;
+}
+.flipstream:before,
+.flipstream:after {
+  content: "";
+  display: table;
+}
+.flipstream:after {
+  clear: both;
+}
+.flipstream > * {
+  float: left;
+}
+.flipstream article {
+  -webkit-flow-into: article-flow;
+}
+.flipstream region #article-flow p {
+  margin-top: 0;
+}
+.flipstream [class*='nav'] a {
+  display: block;
+  position: absolute;
+  top: 45%;
+  width: 5%;
+  height: 10%;
+  background: #999;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #ccc;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2em;
+}
+.flipstream [class*='nav'] a:hover {
+  background: #666;
+  text-decoration: none;
+}
+.flipstream [class*='nav'] a.hidden {
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: alpha(opacity=0);
+}
+.flipstream .previous-nav a {
+  left: 0;
+}
+.flipstream .previous-nav a:hover {
+  left: -7px;
+}
+.flipstream .next-nav a {
+  right: 2px;
+}
+.flipstream .next-nav a:hover {
+  right: -5px;
+}
+.flipstream .page-container {
+  zoom: 1;
+  position: relative;
+  margin-left: 5%;
+  width: 90%;
+  height: 100%;
+  -webkit-perspective: 1700;
+  -moz-perspective: 1700;
+  -ms-perspective: 1700;
+  perspective: 1700;
+}
+.flipstream .page-container:before,
+.flipstream .page-container:after {
+  content: "";
+  display: table;
+}
+.flipstream .page-container:after {
+  clear: both;
+}
+.flipstream .page-container .page {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  -webkit-transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  background: #ccc url("img/texture/lightpaperfibers.png");
+  border: 2px solid #aaa;
+  border-left-width: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0 7px 7px 0;
+  border-radius: 0 7px 7px 0;
+  overflow: hidden;
+}
+.flipstream .page-container .page:nth-child(odd ) {
+  -webkit-transition-property: background-color, -webkit-transform, box-shadow;
+  -moz-transition-property: background-color, -webkit-transform, box-shadow;
+  -o-transition-property: background-color, -webkit-transform, box-shadow;
+  -ms-transition-property: background-color, -webkit-transform, box-shadow;
+  transition-property: background-color, -webkit-transform, box-shadow;
+  -webkit-transition-duration: 0.3s, 0.3s, 0.3s;
+  -moz-transition-duration: 0.3s, 0.3s, 0.3s;
+  -o-transition-duration: 0.3s, 0.3s, 0.3s;
+  -ms-transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  -webkit-transition-timing-function: ease-out, ease-out, ease-out;
+  -moz-transition-timing-function: ease-out, ease-out, ease-out;
+  -o-transition-timing-function: ease-out, ease-out, ease-out;
+  -ms-transition-timing-function: ease-out, ease-out, ease-out;
+  transition-timing-function: ease-out, ease-out, ease-out;
+  -webkit-transition-delay: 0.3s, 0.3s, 0.3s;
+  -moz-transition-delay: 0.3s, 0.3s, 0.3s;
+  -o-transition-delay: 0.3s, 0.3s, 0.3s;
+  -ms-transition-delay: 0.3s, 0.3s, 0.3s;
+  transition-delay: 0.3s, 0.3s, 0.3s;
+}
+.flipstream .page-container .page:nth-child(odd ).selected {
+  -webkit-box-shadow: inset 50px 0 60px #fff, 0px 2px 1px rgba(0,0,0,0.08);
+  box-shadow: inset 50px 0 60px #fff, 0px 2px 1px rgba(0,0,0,0.08);
+}
+.flipstream .page-container .page:nth-child(odd ).turned {
+  -webkit-transition-property: background-color, -webkit-transform, box-shadow;
+  -moz-transition-property: background-color, -webkit-transform, box-shadow;
+  -o-transition-property: background-color, -webkit-transform, box-shadow;
+  -ms-transition-property: background-color, -webkit-transform, box-shadow;
+  transition-property: background-color, -webkit-transform, box-shadow;
+  -webkit-transition-duration: 0.3s, 0.3s, 0.3s;
+  -moz-transition-duration: 0.3s, 0.3s, 0.3s;
+  -o-transition-duration: 0.3s, 0.3s, 0.3s;
+  -ms-transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  -webkit-transition-timing-function: ease-in, ease-in, ease-in;
+  -moz-transition-timing-function: ease-in, ease-in, ease-in;
+  -o-transition-timing-function: ease-in, ease-in, ease-in;
+  -ms-transition-timing-function: ease-in, ease-in, ease-in;
+  transition-timing-function: ease-in, ease-in, ease-in;
+  -webkit-transition-delay: 0, 0, 0;
+  -moz-transition-delay: 0, 0, 0;
+  -o-transition-delay: 0, 0, 0;
+  -ms-transition-delay: 0, 0, 0;
+  transition-delay: 0, 0, 0;
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -o-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+}
+.flipstream .page-container .page:nth-child(odd ) h2 {
+  text-align: right;
+}
+.flipstream .page-container .page:nth-child(even ) {
+  -webkit-transition-property: background-color, -webkit-transform, box-shadow;
+  -moz-transition-property: background-color, -webkit-transform, box-shadow;
+  -o-transition-property: background-color, -webkit-transform, box-shadow;
+  -ms-transition-property: background-color, -webkit-transform, box-shadow;
+  transition-property: background-color, -webkit-transform, box-shadow;
+  -webkit-transition-duration: 0.3s, 0.3s, 0.3s;
+  -moz-transition-duration: 0.3s, 0.3s, 0.3s;
+  -o-transition-duration: 0.3s, 0.3s, 0.3s;
+  -ms-transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  -webkit-transition-timing-function: ease-in, ease-in, ease-in;
+  -moz-transition-timing-function: ease-in, ease-in, ease-in;
+  -o-transition-timing-function: ease-in, ease-in, ease-in;
+  -ms-transition-timing-function: ease-in, ease-in, ease-in;
+  transition-timing-function: ease-in, ease-in, ease-in;
+  -webkit-transition-delay: 0, 0, 0;
+  -moz-transition-delay: 0, 0, 0;
+  -o-transition-delay: 0, 0, 0;
+  -ms-transition-delay: 0, 0, 0;
+  transition-delay: 0, 0, 0;
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -o-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+}
+.flipstream .page-container .page:nth-child(even ).turned {
+  -webkit-transition-property: background-color, -webkit-transform, box-shadow;
+  -moz-transition-property: background-color, -webkit-transform, box-shadow;
+  -o-transition-property: background-color, -webkit-transform, box-shadow;
+  -ms-transition-property: background-color, -webkit-transform, box-shadow;
+  transition-property: background-color, -webkit-transform, box-shadow;
+  -webkit-transition-duration: 0.3s, 0.3s, 0.3s;
+  -moz-transition-duration: 0.3s, 0.3s, 0.3s;
+  -o-transition-duration: 0.3s, 0.3s, 0.3s;
+  -ms-transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  -webkit-transition-timing-function: ease-out, ease-out, ease-out;
+  -moz-transition-timing-function: ease-out, ease-out, ease-out;
+  -o-transition-timing-function: ease-out, ease-out, ease-out;
+  -ms-transition-timing-function: ease-out, ease-out, ease-out;
+  transition-timing-function: ease-out, ease-out, ease-out;
+  -webkit-transition-delay: 0.3s, 0.3s, 0.3s;
+  -moz-transition-delay: 0.3s, 0.3s, 0.3s;
+  -o-transition-delay: 0.3s, 0.3s, 0.3s;
+  -ms-transition-delay: 0.3s, 0.3s, 0.3s;
+  transition-delay: 0.3s, 0.3s, 0.3s;
+  -webkit-transform: rotate3d(0, 1, 0, -180deg);
+  -moz-transform: rotate3d(0, 1, 0, -180deg);
+  -o-transform: rotate3d(0, 1, 0, -180deg);
+  -ms-transform: rotate3d(0, 1, 0, -180deg);
+  transform: rotate3d(0, 1, 0, -180deg);
+}
+.flipstream .page-container .page:nth-child(even ) > * {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.flipstream .page-container .page.cover,
+.flipstream .page-container .page.cover.selected {
+  background-color: #aaa;
+  border-color: #666;
+  border-left-style: solid !important;
+}
+.flipstream .page-container .page.cover:nth-child(odd ),
+.flipstream .page-container .page.cover.selected:nth-child(odd ) {
+  -webkit-box-shadow: inset 50px 0 60px rgba(255,255,255,0.2), 0px 2px 1px rgba(0,0,0,0.08);
+  box-shadow: inset 50px 0 60px rgba(255,255,255,0.2), 0px 2px 1px rgba(0,0,0,0.08);
+}
+.flipstream .page-container .page.cover h2,
+.flipstream .page-container .page.cover.selected h2,
+.flipstream .page-container .page.cover footer,
+.flipstream .page-container .page.cover.selected footer {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+.flipstream .page-container .page.cover .flow,
+.flipstream .page-container .page.cover.selected .flow {
+  -webkit-flow-from: none !important;
+}
+.flipstream .page-container .page.cover,
+.flipstream .page-container .page:nth-child(even ) {
+  border-left: 1px dashed rgba(0,0,0,0.2);
+}
+.flipstream .page-container .page.selected {
+  background-color: #f9f9f9;
+  -webkit-box-shadow: inset 40px 0 60px rgba(0,0,0,0.07), 0px 2px 1px rgba(0,0,0,0.08);
+  box-shadow: inset 40px 0 60px rgba(0,0,0,0.07), 0px 2px 1px rgba(0,0,0,0.08);
+}
+.flipstream .page-container .page.selected h2 {
+  color: rgba(0,0,0,0.5);
+}
+.flipstream .page-container .page.selected > * {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.flipstream .page-container .page .article {
+  zoom: 1;
+  position: absolute;
+  top: 13%;
+  bottom: 7%;
+  left: 7%;
+  right: 7%;
+}
+.flipstream .page-container .page .article:before,
+.flipstream .page-container .page .article:after {
+  content: "";
+  display: table;
+}
+.flipstream .page-container .page .article:after {
+  clear: both;
+}
+.flipstream .page-container .page .article .flow {
+  -webkit-flow-from: article-flow;
+  float: left;
+  width: 47.5%;
+  height: 100%;
+}
+.flipstream .page-container .page .article .flow:first-child {
+  margin-right: 5%;
+}
+.flipstream .page-container .page h2 {
+  margin: 7%;
+  font-size: 2em;
+  display: block;
+}
+.flipstream .page-container .page footer {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  font-size: 0.8em;
+}
+.flipstream .page-container .page h2,
+.flipstream .page-container .page footer {
+  text-shadow: 0 1px 0 #fff;
+}
+.flipstream .page-container .page > * {
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  filter: alpha(opacity=50);
+  -webkit-transition: 0.3s all ease-out 0.3s;
+  -moz-transition: 0.3s all ease-out 0.3s;
+  -o-transition: 0.3s all ease-out 0.3s;
+  -ms-transition: 0.3s all ease-out 0.3s;
+  transition: 0.3s all ease-out 0.3s;
+}

@@ -1,0 +1,37 @@
+!!! 5
+html
+  head
+    title Flipstream
+    script( src='/scripts/jquery-1.7.1.min.js' )
+    script( src='/scripts/flipstream.js' )
+    link( rel='stylesheet', href='/stylesheets/normalize.css' )
+    link( rel='stylesheet', href='/stylesheets/fonts.css' )
+    link( rel='stylesheet', href='/stylesheets/flipstream.css' )
+
+  body
+  
+    .flipstream
+    
+      article
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper congue orci, ac elementum sem tempus a. Vestibulum quam lacus, facilisis quis ultrices sed, molestie sed purus. Curabitur egestas molestie risus, ut cursus orci varius adipiscing. Ut eget turpis nec velit eleifend tempor ac id diam. Vivamus non arcu non eros dictum blandit. Quisque eleifend dapibus sapien, vitae consectetur erat pharetra ac. Cras vel orci libero, a mattis erat.
+        p Mauris placerat scelerisque arcu eget ultricies. Morbi eu diam nisi. Nullam aliquam consequat luctus. Phasellus sed dolor sit amet orci facilisis ullamcorper sit amet nec est. Etiam pellentesque nisi eu enim iaculis accumsan vitae et risus. Nam adipiscing, erat sit amet euismod tincidunt, est dolor pulvinar tellus, sed sodales est turpis vitae leo. In hac habitasse platea dictumst. Nullam in nisl vel purus blandit ornare sit amet et leo. Nam ultrices felis a turpis auctor tempor. Quisque eu eros nibh, mollis adipiscing sem. Maecenas placerat fringilla leo, a pellentesque elit placerat vitae.
+        p Morbi sed quam et tellus varius commodo vitae sed velit. Cras consectetur ultrices dolor, nec viverra lacus pretium ac. Etiam tincidunt dolor nec felis sagittis blandit. Praesent lobortis suscipit tristique. Vivamus elementum, dolor at viverra vestibulum, ipsum eros accumsan nibh, sit amet lobortis urna eros eu purus. Curabitur ac est ut lorem mattis euismod. Nam pharetra, dui ut pulvinar aliquet, nibh dui fermentum justo, ut faucibus enim neque quis velit. Duis id dui dui, ac rutrum turpis. Sed eu velit quam. Ut convallis tempus aliquam. Integer elementum dui a justo scelerisque venenatis. Aenean adipiscing arcu et nulla fringilla porttitor.
+        p Vestibulum gravida porta dui, scelerisque aliquet nulla accumsan quis. Fusce ullamcorper tortor quis risus bibendum gravida nec quis velit. Quisque cursus faucibus dui, eget commodo velit vulputate eget. Vivamus elementum venenatis lorem, ullamcorper ornare nisl gravida at. Nulla vulputate, ligula eget lobortis ultricies, nunc justo accumsan dolor, a ornare lorem ligula quis tellus. Praesent in erat ut arcu mattis fringilla. Pellentesque porta pharetra lorem et sollicitudin. Donec lorem lorem, tincidunt non tempor vitae, accumsan sed tellus. Etiam imperdiet, purus hendrerit tincidunt consequat, purus nisi volutpat mi, nec semper dui massa molestie velit. Donec non magna at turpis euismod aliquet at vel velit. Sed at nisi magna, sed suscipit ligula. Sed risus nibh, scelerisque porttitor volutpat porttitor, dignissim id augue. Nulla in lorem ut orci ultrices fermentum. Praesent tincidunt pellentesque tellus ac auctor. Aenean ac vulputate mauris. Vestibulum et eros nisl.
+        p Proin porttitor diam sit amet augue tempor interdum. Maecenas a pellentesque massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis, nibh in congue ullamcorper, leo nulla lacinia nisi, vitae bibendum elit nunc sed tortor. Curabitur velit ligula, vulputate vel pellentesque quis, ultricies eget urna. Phasellus interdum dapibus erat sit amet dictum. Nullam diam ante, egestas non rhoncus vulputate, vestibulum non enim. Donec rutrum volutpat arcu, quis tempor nulla tincidunt vitae.
+    
+      .previous-nav
+        a( href='javascript:;' ) Previous
+      
+      .next-nav
+        a( href='javascript:;' ) Next
+      
+      .page-container
+        for i in [1,2,3,4,5,6]
+          .page( class="page-#{ i } #{ i === 1 || i === 6 ? 'cover' : '' }" )
+            h2 #{ i }
+            .article
+              if i > 1
+                .flow
+                .flow
+            footer
+              p #{ i } of 6
